@@ -1,0 +1,289 @@
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        
+       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        
+      
+        <script type="text/javascript" src="js/registration.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+       
+       
+            <script type="text/javascript" src="js/functions.js"></script>
+       
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    </head>
+    <body>
+
+        <!-- Login -->
+
+  <div data-role="page" id="login">
+   <div data-role="header">
+    <h1 style=" font-family: 'italic';font-size: 25px;"> Mero Saman</h1>
+   </div>
+   <br><br>
+   <div role="main" class="main">
+    <form action="">
+     
+        <input name="email" id="email" type="email" placeholder="Enter your Email" data-validate="required email" >
+        <input name ="password" id="password" type="password" placeholder="Enter your Password" required>
+      <!--  <input type="submit" name="submit" value="Login">    
+      -->
+        <button type="button"  onclick="Login();">Login</button>
+     
+             
+    </form>
+
+    <a href="#register" class="ui-btn ui-corner-all " >Register</a>
+    
+   </div>
+ 
+   <div data-role="footer" data-position="fixed">
+    <h1>Created by Group 3</h1>
+   </div>
+  </div>
+  <!-- Sign Up -->
+  
+  <div data-role="page" id="register">
+   <div data-role="header">
+    <h1 style=" font-family: 'italic', Times, serif;font-size: 25px;"> Mero Saman</h1>
+    
+   </div>
+    
+   <div role="main" class="main">
+                <form action="">
+                        <input name="name" id="name" type="text" placeholder="Enter your Name" required>
+                        <input name="address" type="text" id="address" placeholder="Enter your Address" required>    
+                        <input name="useremail" type="email" id="useremail" placeholder="Enter your email" data-validate="required email" >
+                        <!--<input name="password" type="password" id="password" placeholder="Enter your password" required>
+                        -->
+                        <input name="userpassword" type="password" id="userpassword" placeholder="Enter your password" required>
+                        <input name="confpassword" type="password" id="confpassword" placeholder="Confirm your password" required>
+                       <!-- <input type="text" id="usertype" placeholder="Select User Type"
+                        -->
+                        <select name="usertype" id="usertype" >
+                                <option value="">Please Select User Type</option>
+                                <option value="admin">Administrator</option>
+                                <option value="user">User</option>
+                        </select>
+
+                        <button type="button"  onclick= "Register();">Register</button>
+
+                    
+    </form>
+    <a href="#login" class="ui-btn ui-corner-all " >Go Back</a>
+    
+   </div>
+  </div>
+  
+  <!--  Dashboard       -->
+  
+<div data-role="page" id="dashboard">
+    <div data-role="header">
+        <h1 style=" font-family: 'italic', Times, serif;font-size: 25px;"> Mero Saman</h1>
+    </div>
+     
+    <div role="main" class="main">
+
+       <a href="#Inventory" class="ui-btn ui-corner-all">Inventory</a>
+        <!-- <button type="button"  class="ui-btn ui-corner-all" onclick="ManageInventory();">Manage Inventory</button> -->
+        <button type="button"  class="ui-btn ui-corner-all" onclick="PurchaseOrder();">Purchase Order</button>
+        <button type="button"  class="ui-btn ui-corner-all" onclick="SalesOrder();">Sales Order</button>
+        <button type="button"  class="ui-btn ui-corner-all" onclick="Accounts();">Accounts</button>
+
+        <div data-role="footer" data-position="fixed">
+            <center><a href="#login" class="ui-btn ui-btn-inline ui-corner-all">Back</a></center>
+            <h1>Created by Group 3</h1>
+        </div>
+    </div>
+ 
+
+</div>
+
+<!--Inventory-->
+<div data-role="page" id="Inventory">
+
+<div data-role="header">
+    <h1 style=" font-family: 'italic', Times, serif;font-size: 25px;"> Mero Saman</h1>
+</div>
+ 
+<div role="main" class="main">
+    
+    <!-- <button type="button"  class="ui-btn ui-corner-all" onclick="Display();">Display Products</button>
+
+  
+            <h2>Products</h2>
+            <div data-demo-html="true">
+                <ul data-role="listview" id="productlist">
+                    <li>Loading events</li>
+                </ul>
+            </div> -->
+       
+            <a href="#Display" class="ui-btn ui-corner-all">Display</a>
+    <a href="#Addproduct" class="ui-btn ui-corner-all">Add Product</a>
+    <a href="#Purchase" class="ui-btn ui-corner-all">Purchase</a>
+    <a href="#Sales" class="ui-btn ui-corner-all">Sales</a>
+    <a href="#Returned" class="ui-btn ui-corner-all">Returned/Damaged Items</a>
+
+    <div data-role="footer" data-position="fixed">
+        <center><a href="#dashboard" class="ui-btn ui-btn-inline ui-corner-all">Back</a></center>
+        <h1>Created by Group 3</h1>
+    </div>
+</div>
+</div>
+
+<!--Display-->
+<div data-role="page" id="Display">
+
+    <div data-role="header">
+        <h1 style=" font-family: 'italic', Times, serif;font-size: 25px;"> Mero Saman</h1>
+    </div>
+     
+    <div role="main" class="main">
+        
+        <button type="button"  class="ui-btn ui-corner-all" onclick="Display();">Show Items</button>
+        <!-- <form onsubmit="Display()"></form> -->
+    
+      
+                <!-- <h2>Products</h2> -->
+                <div data-demo-html="true">
+                    <ul data-role="listview" id="productlist">
+                       
+                    </ul>
+                </div>
+    
+        <div data-role="footer" data-position="fixed">
+            <center><a href="#Inventory" class="ui-btn ui-btn-inline ui-corner-all">Back</a></center>
+            <h1>Created by Group 3</h1>
+        </div>
+    </div>
+    </div>
+
+
+<!--Add Products-->
+
+<div data-role="page" id="Addproduct">
+
+    <div data-role="header">
+        <h1 style=" font-family: 'italic', Times, serif;font-size: 25px;"> Mero Saman</h1>
+    </div>
+     
+    <div role="main" class="main">
+        <form action="">
+                <input name="productname" id="productname" type="text" placeholder="Enter the name of Product">
+                <input name="productID" id="productID" type="number" placeholder="Enter ProductID">
+                <input name="productquantity" id="productquantity" type="number" placeholder="Enter Product Quantity">
+                
+        <div data-role="footer" data-position="fixed">
+            <center><a href="#Inventory" class="ui-btn ui-btn-inline ui-corner-all">Back</a></center>
+            <h1>Created by Group 3</h1>
+        </div>
+    </div>
+    
+    <button type="button"  onclick="Addproduct();">Submit</button>
+    <button type="button"  class="ui-btn ui-corner-all" onclick="AddView();">Product Reference</button>
+                      <div data-demo-html="true">
+                    <ul data-role="listview" id="addlist">
+                       
+                    </ul>
+                </div>
+
+    </div>
+
+<!--Purchase-->
+
+<div data-role="page" id="Purchase">
+
+    <div data-role="header">
+        <h1 style=" font-family: 'italic', Times, serif;font-size: 25px;"> Mero Saman</h1>
+    </div>
+     
+    <div role="main" class="main">
+        <form action="">
+                <input name="purchasename" id="purchasename" type="text" placeholder="Enter the name of Product">
+                <input name="purchaseID" id="purchaseID" type="number" placeholder="Enter ProductID">
+                <input name="purchasequantity" id="purchasequantity" type="number" placeholder="Enter purchase Quantity">
+
+        <div data-role="footer" data-position="fixed">
+            <center><a href="#Inventory" class="ui-btn ui-btn-inline ui-corner-all">Back</a></center>
+            <h1>Created by Group 3</h1>
+        </div>
+    </div>
+
+    <button type="button"  onclick="Purchase();">Submit</button>
+    <button type="button"  class="ui-btn ui-corner-all" onclick="PurchaseView();">Product Reference</button>
+                      <div data-demo-html="true">
+                    <ul data-role="listview" id="purchaselist">
+                       
+                    </ul>
+                </div>
+
+    </div>
+
+    <!--Sales-->
+
+<div data-role="page" id="Sales">
+
+    <div data-role="header">
+        <h1 style=" font-family: 'italic', Times, serif;font-size: 25px;"> Mero Saman</h1>
+    </div>
+     
+    <div role="main" class="main">
+        <form action="">
+                <input name="salesname" id="salesname" type="text" placeholder="Enter the name of Product">
+                <input name="salesID" id="salesID" type="number" placeholder="Enter ProductID">
+                <input name="salesquantity" id="salesquantity" type="number" placeholder="Enter sales Quantity">
+
+        <div data-role="footer" data-position="fixed">
+            <center><a href="#Inventory" class="ui-btn ui-btn-inline ui-corner-all">Back</a></center>
+            <h1>Created by Group 3</h1>
+        </div>
+    </div>
+    <button type="button"  onclick="Sales();">Submit</button>
+    <button type="button"  class="ui-btn ui-corner-all" onclick="SalesView();">Product Reference</button>
+    <div data-demo-html="true">
+  <ul data-role="listview" id="saleslist">
+     
+  </ul>
+</div>
+
+    </div>
+
+<!--Returned-->
+
+<div data-role="page" id="Returned">
+
+    <div data-role="header">
+        <h1 style=" font-family: 'italic', Times, serif;font-size: 25px;"> Mero Saman</h1>
+    </div>
+     
+    <div role="main" class="main">
+        <form action="">
+                <input name="returnedname" id="returnedname" type="text" placeholder="Enter the name of Product">
+                <input name="returnedID" id="returnedID" type="number" placeholder="Enter ProductID">
+                <input name="returnedquantity" id="returnedquantity" type="number" placeholder="Enter Returned/Damaged Quantity">
+
+        <div data-role="footer" data-position="fixed">
+            <center><a href="#Inventory" class="ui-btn ui-btn-inline ui-corner-all">Back</a></center>
+            <h1>Created by Group 3</h1>
+        </div>
+    </div>
+    <button type="button"  onclick="Returned();">Submit</button>
+    <button type="button"  class="ui-btn ui-corner-all" onclick="ReturnView();">Product Reference</button>
+    <div data-demo-html="true">
+  <ul data-role="listview" id="returnlist">
+     
+  </ul>
+</div>
+
+    </div>
+
+
+ </body>
+</html>
